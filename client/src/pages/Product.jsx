@@ -93,7 +93,7 @@ export default function Product() {
             width={900}
             alt={`${product.brand}, ${name}`}
             eager
-            className="aspect-[4/5] w-full bg-sol"
+            className="aspect-[4/5] w-full rounded-lg bg-sol"
           />
           <Badges product={product} className="absolute left-3 top-3" />
         </div>

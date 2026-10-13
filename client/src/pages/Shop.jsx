@@ -5,7 +5,7 @@ import { useLang, usePageTitle } from '../context/LanguageContext.jsx';
 import { useApi } from '../lib/api.js';
 import { CATEGORIES, GENDERS } from '../lib/company.js';
 
-const FILTER_KEYS = ['category', 'gender', 'brand', 'sale', 'q', 'sort'];
+const FILTER_KEYS = ['category', 'gender', 'brand', 'sale', 'new', 'q', 'sort'];
 
 function Pills({ label, value, options, onChange }) {
   return (
@@ -130,9 +130,18 @@ export default function Shop() {
             type="checkbox"
             checked={Boolean(filters.sale)}
             onChange={(event) => setFilter('sale', event.target.checked ? '1' : '')}
-            className="size-[1.125rem] cursor-pointer accent-ink"
+            className="size-[1.125rem] cursor-pointer accent-vert"
           />
           {t('shop.sale')}
+        </label>
+        <label className="flex min-h-10 cursor-pointer items-center gap-2 text-[0.9375rem] font-medium">
+          <input
+            type="checkbox"
+            checked={Boolean(filters.new)}
+            onChange={(event) => setFilter('new', event.target.checked ? '1' : '')}
+            className="size-[1.125rem] cursor-pointer accent-vert"
+          />
+          {t('shop.newOnly')}
         </label>
         <p className="ml-auto text-[0.9375rem] text-ardoise" aria-live="polite">
           {data ? t('shop.count', data.total) : ' '}

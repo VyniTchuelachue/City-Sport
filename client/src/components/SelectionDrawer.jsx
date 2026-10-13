@@ -19,7 +19,7 @@ function Line({ item }) {
   return (
     <li className="flex gap-4 py-4">
       <Link to={`/produit/${item.slug}`} onClick={close} className="w-20 shrink-0" tabIndex={-1} aria-hidden="true">
-        <ProductImage product={item} width={160} className="aspect-[4/5] w-full" />
+        <ProductImage product={item} width={160} className="aspect-[4/5] w-full rounded-md" />
       </Link>
       <div className="min-w-0 flex-1">
         <p className="text-[0.8125rem] font-semibold">{item.brand}</p>

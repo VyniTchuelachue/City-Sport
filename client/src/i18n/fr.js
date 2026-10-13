@@ -12,12 +12,18 @@ export default {
     closeMenu: 'Fermer le menu',
     search: 'Rechercher',
     searchLabel: 'Rechercher un article',
-    searchPlaceholder: 'Marque, article, sport…',
+    searchPlaceholder: 'Chaussures, vêtements, marques…',
     selection: 'Ma sélection',
     selectionCount: (n) => (n ? `Ma sélection, ${n} article${n > 1 ? 's' : ''}` : 'Ma sélection, vide'),
     switchLang: 'English',
     switchLangLabel: 'Read this site in English',
     home: "City Sport, retour à l'accueil",
+  },
+
+  strip: {
+    tagline: 'Deux villes. Trois magasins. Le jeu en plus grand.',
+    brands: 'Nos marques',
+    visit: 'Nos magasins',
   },
 
   cat: {
@@ -53,31 +59,37 @@ export default {
 
   home: {
     pageTitle: 'Sport et lifestyle à Douala et Yaoundé',
-    heroLines: ['le sport', 'habille', 'la ville.'],
+    heroLines: ['La ville', 'bouge.'],
+    heroAccent: 'Vous menez.',
     heroText:
-      'Chaussures, vêtements et équipement des grandes marques, à essayer dans nos trois magasins de Douala et Yaoundé.',
-    heroShop: 'Voir la boutique',
+      'Baskets, vêtements de sport et essentiels des plus grandes marques. À Douala et Yaoundé.',
+    heroShop: 'Voir les nouveautés',
     heroStores: 'Trouver un magasin',
     heroAlt:
-      'Intérieur du magasin City Sport de Bali : mur de baskets Adidas et Puma, portants de sweats et de t-shirts.',
-    aisles: 'les rayons',
-    aislesText: 'Du terrain à la rue, pour toute la famille.',
-    arrivals: 'arrivages',
-    arrivalsLink: 'Voir tous les articles',
-    brands: 'les marques',
-    brandsText: 'Les grandes marques de sport et de lifestyle, réunies sous la même enseigne.',
-    storesTitle: 'trois magasins, deux villes',
-    storesText: "Tout s'essaie sur place : venez voir, toucher, comparer.",
-    storesLink: 'Horaires et itinéraires',
-    aboutTitle: "derrière l'enseigne",
+      'Un homme en casquette verte et baskets de couleur, assis sur un muret devant des palmiers.',
+    featured: 'Marques à la une :',
+    categories: { lead: 'Nos', accent: 'rayons' },
+    categoriesText: 'Tout pour bouger, de la rue au terrain.',
+    categoriesLink: 'Voir tous les rayons',
+    newIn: { lead: 'Nouveaux', accent: 'arrivages' },
+    newInText: 'Les dernières sorties de vos marques préférées.',
+    newInLink: 'Voir toutes les nouveautés',
+    stores: { lead: 'Nos', accent: 'magasins' },
+    storesText: 'Rendez-nous visite à Douala et Yaoundé : venez voir, essayer, comparer.',
+    storesLink: 'Voir tous les magasins',
+    brands: { lead: 'Les', accent: 'marques' },
+    brandsText: 'Les plus grands noms du sport et du lifestyle, sous le même toit.',
+    brandsLink: 'Voir toutes les marques',
+    about: { lead: 'Derrière', accent: "l'enseigne" },
+    aboutAlt: 'Une joueuse de basket en maillot rouge, de profil, au bord du terrain.',
     aboutText:
       "City Sport est une enseigne de SODICAM, société du groupe Mercuriale International. À Douala et Yaoundé, le groupe tient aussi des magasins de mode, d'alimentation et de high-tech.",
-    aboutLink: 'Découvrir la maison',
+    aboutLink: 'À propos de City Sport',
   },
 
   shop: {
     pageTitle: 'Boutique',
-    title: 'boutique',
+    title: 'Boutique',
     count: (n) => (n === 0 ? 'Aucun article' : n === 1 ? '1 article' : `${n} articles`),
     all: 'Tout',
     category: 'Rayon',
@@ -90,6 +102,7 @@ export default {
     sortAsc: 'Prix croissant',
     sortDesc: 'Prix décroissant',
     sale: 'Prix réduits',
+    newOnly: 'Nouveautés',
     resultsFor: (q) => `Résultats pour « ${q} »`,
     clearSearch: 'Effacer la recherche',
     emptyTitle: 'Aucun article ne correspond à ces filtres.',
@@ -111,8 +124,10 @@ export default {
     notice: 'Prix et disponibilité à confirmer en magasin.',
     where: 'Où le trouver',
     call: 'Appeler',
-    related: 'dans le même rayon',
-    notFoundTitle: 'article introuvable',
+    related: 'Dans le même rayon',
+    notFoundTitle: 'Article introuvable',
+    quickAdd: (name) => `Ajouter ${name} à ma sélection`,
+    pickSize: 'Choisir une taille',
     notFoundText: 'Cet article a peut-être quitté le catalogue.',
     backToShop: 'Retour à la boutique',
     was: 'Ancien prix',
@@ -151,7 +166,7 @@ export default {
 
   stores: {
     pageTitle: 'Magasins',
-    title: 'nos magasins',
+    title: 'Nos magasins',
     intro: 'Deux adresses à Douala, une à Yaoundé.',
     directions: 'Itinéraire',
     call: 'Appeler',
@@ -167,7 +182,7 @@ export default {
 
   about: {
     pageTitle: 'La maison',
-    title: 'la maison',
+    title: 'La maison',
     lead: "City Sport habille les sportifs et les citadins du Cameroun, avec les grandes marques internationales à portée de main.",
     p1: "L'enseigne appartient à SODICAM, entreprise multiservices du groupe Mercuriale International, installée à Douala et à Yaoundé. Le groupe travaille dans quatre métiers : le sport, la mode, l'alimentaire et le high-tech.",
     p2: "Dans nos magasins, vous trouvez de quoi courir, jouer, nager et vous entraîner, mais aussi de quoi sortir : baskets, jeans, robes et vestes pour l'homme, la femme et l'enfant.",
@@ -182,7 +197,7 @@ export default {
 
   contact: {
     pageTitle: 'Contact',
-    title: 'contact',
+    title: 'Contact',
     intro:
       'Une question sur un article, une taille ou un magasin ? Écrivez-nous, ou appelez directement le magasin le plus proche.',
     name: 'Nom',
@@ -215,6 +230,7 @@ export default {
     rate_limited: 'Trop de messages envoyés. Réessayez dans quelques minutes.',
     server_error: "L'envoi n'a pas abouti. Réessayez dans un instant.",
     validation: 'Corrigez les champs signalés, puis renvoyez.',
+    consent: 'Cochez la case pour confirmer votre inscription.',
     unavailable: 'Ce formulaire est indisponible pour le moment. Appelez directement le magasin.',
   },
 
@@ -226,12 +242,20 @@ export default {
     headOffice: 'Siège : Akwa, Douala',
     payments: (list) => `Paiement en magasin : ${list}`,
     youtube: 'City Sport sur YouTube',
-    rights: (year) => `© ${year} SODICAM. Tous droits réservés.`,
+    aboutLink: 'À propos de City Sport',
+    newsletterTitle: 'Rejoignez le mouvement',
+    newsletterText: 'Nouveautés, offres et événements, par e-mail.',
+    emailLabel: 'Votre adresse e-mail',
+    consent: "J'accepte de recevoir les communications de City Sport.",
+    subscribe: "S'inscrire",
+    subscribed: 'Merci, votre inscription est enregistrée.',
+    group: 'Une enseigne du groupe SODICAM / Mercuriale International.',
+    rights: (year) => `© ${year} City Sport. Tous droits réservés.`,
   },
 
   notFound: {
     pageTitle: 'Page introuvable',
-    title: 'page introuvable',
+    title: 'Page introuvable',
     text: 'Cette adresse ne mène à aucune page du site.',
     home: "Retour à l'accueil",
   },

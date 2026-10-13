@@ -14,7 +14,7 @@ export default function NotFound() {
           {t('notFound.home')}
         </Link>
         <Link to="/boutique" className="bouton bouton-contour">
-          {t('home.heroShop')}
+          {t('selection.browse')}
         </Link>
       </div>
     </div>

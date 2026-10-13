@@ -2,42 +2,55 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Logo from './Logo.jsx';
 import OpenStatus from './OpenStatus.jsx';
-import { BagIcon, CloseIcon, MenuIcon, SearchIcon } from './Icons.jsx';
+import { CartIcon, CloseIcon, MenuIcon, PinIcon, SearchIcon } from './Icons.jsx';
 import { useLang } from '../context/LanguageContext.jsx';
 import { useSelection } from '../context/SelectionContext.jsx';
 import { useStores } from '../context/StoresContext.jsx';
 import { CATEGORIES } from '../lib/company.js';
 
-function StoreStrip() {
+// Thin black bar above the header: tagline, how many stores are open right now,
+// and a few shortcuts. Phones keep only the live status and the language switch.
+function TopStrip() {
   const { t, toggle } = useLang();
   const { stores } = useStores();
   const openCount = stores.filter((store) => store.status.open).length;
 
   return (
     <div className="sur-noir bg-ink text-paper">
-      <div className="wrap flex min-h-9 items-center justify-between gap-4 text-[0.8125rem]">
-        {/* Phones get one summary line; wider screens list each store. */}
-        <Link to="/magasins" className="py-2 hover:underline lg:hidden">
+      <div className="wrap flex min-h-9 items-center justify-between gap-6 text-[0.8125rem]">
+        <p className="hidden items-center gap-2 lg:flex">
+          <PinIcon className="size-4 text-enseigne" />
+          {t('strip.tagline')}
+        </p>
+        <Link to="/magasins" className="flex items-center gap-2 py-2 hover:underline">
+          <span
+            aria-hidden="true"
+            className={`size-2 rounded-full ${openCount ? 'bg-enseigne' : 'border-[1.5px] border-current opacity-60'}`}
+          />
           {stores.length ? t('status.openCount', openCount) : t('nav.stores')}
         </Link>
-        <ul className="hidden items-center gap-x-8 lg:flex">
-          {stores.map((store) => (
-            <li key={store.id}>
-              <Link to={`/magasins#${store.id}`} className="flex items-center gap-2 py-2 hover:underline">
-                <span className="font-semibold">{store.shortName}</span>
-                <OpenStatus status={store.status} className="text-paper/80" />
-              </Link>
-            </li>
-          ))}
+        <ul className="flex items-center divide-x divide-paper/30">
+          <li className="hidden pr-4 md:block">
+            <Link to="/a-propos#marques" className="hover:underline">
+              {t('strip.brands')}
+            </Link>
+          </li>
+          <li className="hidden px-4 md:block">
+            <Link to="/magasins" className="hover:underline">
+              {t('strip.visit')}
+            </Link>
+          </li>
+          <li className="md:pl-4">
+            <button
+              type="button"
+              onClick={toggle}
+              aria-label={t('nav.switchLangLabel')}
+              className="cursor-pointer py-2 font-semibold underline-offset-4 hover:underline"
+            >
+              {t('nav.switchLang')}
+            </button>
+          </li>
         </ul>
-        <button
-          type="button"
-          onClick={toggle}
-          aria-label={t('nav.switchLangLabel')}
-          className="cursor-pointer py-2 font-semibold underline-offset-4 hover:underline"
-        >
-          {t('nav.switchLang')}
-        </button>
       </div>
     </div>
   );
@@ -61,6 +74,13 @@ function SearchForm({ id, onDone, autoFocus = false, className = '' }) {
       <label htmlFor={id} className="sr-only">
         {t('nav.searchLabel')}
       </label>
+      <button
+        type="submit"
+        aria-label={t('nav.search')}
+        className="absolute left-1 top-1/2 grid size-9 -translate-y-1/2 cursor-pointer place-items-center rounded-md hover:bg-trait"
+      >
+        <SearchIcon />
+      </button>
       <input
         id={id}
         type="search"
@@ -69,21 +89,14 @@ function SearchForm({ id, onDone, autoFocus = false, className = '' }) {
         placeholder={t('nav.searchPlaceholder')}
         autoFocus={autoFocus}
         enterKeyHint="search"
-        className="h-11 w-full rounded-full border-[1.5px] border-trait bg-paper pl-4 pr-11 text-[0.9375rem] placeholder:text-ardoise hover:border-ardoise focus:border-ink focus:outline-none"
+        className="h-11 w-full rounded-lg border-[1.5px] border-transparent bg-sol pl-11 pr-4 text-[0.9375rem] placeholder:text-ardoise hover:border-trait focus:border-ink focus:bg-paper focus:outline-none"
       />
-      <button
-        type="submit"
-        aria-label={t('nav.search')}
-        className="absolute right-1 top-1/2 grid size-9 -translate-y-1/2 cursor-pointer place-items-center rounded-full hover:bg-sol"
-      >
-        <SearchIcon />
-      </button>
     </form>
   );
 }
 
 const navLinkClass = ({ isActive }) =>
-  `relative py-2 text-[0.9375rem] font-medium underline-offset-[6px] decoration-2 hover:underline ${
+  `relative whitespace-nowrap py-2 text-[0.9375rem] font-semibold underline-offset-[6px] decoration-2 decoration-vert hover:underline ${
     isActive ? 'underline' : ''
   }`;
 
@@ -124,15 +137,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-paper">
-      <StoreStrip />
+      <TopStrip />
       <div className="border-b border-trait">
         <div className="wrap flex h-16 items-center gap-4 lg:h-[4.5rem] lg:gap-8">
           <Link to="/" aria-label={t('nav.home')} className="shrink-0">
-            <Logo className="h-7 w-auto lg:h-8" />
+            <Logo className="h-7 w-auto lg:h-9" />
           </Link>
 
-          <nav aria-label={t('nav.main')} className="hidden flex-1 lg:block">
-            <ul className="flex items-center gap-x-6 xl:gap-x-8">
+          <nav aria-label={t('nav.main')} className="hidden lg:block">
+            <ul className="flex items-center gap-x-5 xl:gap-x-8">
               {CATEGORIES.map((category) => (
                 <li key={category}>
                   <Link
@@ -144,7 +157,6 @@ export default function Header() {
                   </Link>
                 </li>
               ))}
-              <li aria-hidden="true" className="h-5 w-px bg-trait" />
               <li>
                 <NavLink to="/magasins" className={navLinkClass}>
                   {t('nav.stores')}
@@ -158,15 +170,15 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div className="ml-auto flex items-center gap-1 lg:ml-0 lg:gap-3">
-            <SearchForm id="recherche" className="hidden w-56 xl:block xl:w-64" />
+          <div className="ml-auto flex items-center gap-1 xl:flex-1 xl:justify-end xl:gap-4">
+            <SearchForm id="recherche" className="hidden max-w-md flex-1 xl:block" />
             <button
               type="button"
               onClick={() => setSearchOpen((value) => !value)}
               aria-expanded={searchOpen}
               aria-controls="recherche-mobile"
               aria-label={t('nav.search')}
-              className="grid size-11 cursor-pointer place-items-center rounded-full hover:bg-sol xl:hidden"
+              className="grid size-11 cursor-pointer place-items-center rounded-lg hover:bg-sol xl:hidden"
             >
               {searchOpen ? <CloseIcon /> : <SearchIcon />}
             </button>
@@ -174,15 +186,19 @@ export default function Header() {
               type="button"
               onClick={open}
               aria-label={t('nav.selectionCount', count)}
-              className="relative flex h-11 cursor-pointer items-center gap-2 rounded-full px-3 hover:bg-sol"
+              className="flex h-11 cursor-pointer items-center gap-2 rounded-lg px-2.5 hover:bg-sol"
             >
-              <BagIcon />
-              <span className="hidden text-[0.9375rem] font-medium sm:inline">{t('nav.selection')}</span>
-              {count > 0 && (
-                <span className="prix grid h-5 min-w-5 place-items-center rounded-full bg-ink px-1.5 text-xs text-paper">
-                  {count}
-                </span>
-              )}
+              <span className="relative">
+                <CartIcon className="size-6" />
+                {count > 0 && (
+                  <span className="prix absolute -right-2 -top-2 grid h-[1.125rem] min-w-[1.125rem] place-items-center rounded-full bg-vert px-1 text-[0.6875rem] text-paper">
+                    {count}
+                  </span>
+                )}
+              </span>
+              <span className="hidden whitespace-nowrap text-[0.9375rem] font-semibold sm:inline lg:hidden xl:inline">
+                {t('nav.selection')}
+              </span>
             </button>
             <button
               ref={menuButton}
@@ -191,7 +207,7 @@ export default function Header() {
               aria-expanded={menuOpen}
               aria-controls="menu-mobile"
               aria-label={t('nav.openMenu')}
-              className="grid size-11 cursor-pointer place-items-center rounded-full hover:bg-sol lg:hidden"
+              className="grid size-11 cursor-pointer place-items-center rounded-lg hover:bg-sol lg:hidden"
             >
               <MenuIcon />
             </button>
@@ -223,7 +239,7 @@ export default function Header() {
                 menuButton.current?.focus();
               }}
               aria-label={t('nav.closeMenu')}
-              className="grid size-11 cursor-pointer place-items-center rounded-full hover:bg-sol"
+              className="grid size-11 cursor-pointer place-items-center rounded-lg hover:bg-sol"
             >
               <CloseIcon />
             </button>

@@ -163,4 +163,36 @@ router.post('/requests', limiter, async (req, res, next) => {
   }
 });
 
+router.post('/newsletter', limiter, async (req, res, next) => {
+  try {
+    const body = req.body ?? {};
+    if (body.website) return res.status(201).json({ ok: true });
+
+    const email = clean(body.email, 120).toLowerCase();
+    const fields = {};
+    if (!EMAIL.test(email)) fields.email = 'invalid';
+    // Marketing e-mail needs an explicit yes; a missing or false value is a no.
+    if (body.consent !== true) fields.consent = 'required';
+    if (Object.keys(fields).length) return res.status(422).json({ error: 'validation', fields });
+
+    const saved = { email, subscribedAt: new Date().toISOString() };
+    await deliver({
+      kind: 'newsletter',
+      file: 'subscribers.json',
+      record: saved,
+      email: {
+        subject: `Inscription à la newsletter : ${email}`,
+        text: [
+          lines([['E-mail', email]]),
+          'Cette personne a coché la case acceptant de recevoir les communications de City Sport.',
+          `Reçu le ${receivedAt(saved.subscribedAt)} (heure du Cameroun)`,
+        ].join('\n\n'),
+      },
+    });
+    res.status(201).json({ ok: true });
+  } catch (err) {
+    fail(res, err, next);
+  }
+});
+
 export default router;

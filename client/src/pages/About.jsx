@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useLang, usePageTitle } from '../context/LanguageContext.jsx';
 import { useApi } from '../lib/api.js';
 import { payments, sisterStores } from '../lib/company.js';
@@ -6,7 +7,13 @@ import { payments, sisterStores } from '../lib/company.js';
 export default function About() {
   const { t, pick } = useLang();
   const { data: meta } = useApi('/meta');
+  const { hash } = useLocation();
   usePageTitle(t('about.pageTitle'));
+
+  // Arriving on /a-propos#marques lands on the brand list.
+  useEffect(() => {
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+  }, [hash]);
 
   return (
     <>
@@ -29,7 +36,7 @@ export default function About() {
               alt={t('about.photoAlt')}
               width="1600"
               height="1200"
-              className="aspect-[4/3] w-full bg-sol object-cover"
+              className="aspect-[4/3] w-full rounded-lg bg-sol object-cover"
             />
           </div>
         </div>
@@ -53,7 +60,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="wrap py-16 lg:py-24">
+      <section id="marques" className="wrap scroll-mt-32 py-16 lg:py-24">
         <h2 className="titre text-[clamp(1.75rem,4vw,2.75rem)]">{t('about.brandsTitle')}</h2>
         <dl className="mt-10 grid gap-x-8 sm:grid-cols-2">
           {(meta?.brands ?? []).map((brand) => (

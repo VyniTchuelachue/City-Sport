@@ -70,7 +70,7 @@ put them in a `.env` file (see `.env.example`).
 
 | Page | Address | Notes |
 | --- | --- | --- |
-| Home | `/` | Hero, aisles, new arrivals, stores, brands |
+| Home | `/` | Hero, featured brands, categories, new arrivals, stores, brand wall, newsletter sign-up in the footer |
 | Shop | `/boutique` | Filters by aisle, gender, brand, reduced price; search; sorting. Filters live in the URL, so any view can be shared |
 | Product | `/produit/:slug` | Size choice, add to "Ma sélection", stores that stock it |
 | Stores | `/magasins` | Address, phone, hours, live open/closed status, map on request |
@@ -114,9 +114,26 @@ photos are loaded from Unsplash. Replace them with the real stock list and your 
 photos before the site goes public: put images in `client/public/images/products/` and
 point `image` at `/images/products/your-file.webp`.
 
+### The lifestyle photos are placeholders too
+
+The hero, the four category cards and the "Behind the sign" picture are free stock photos
+from Unsplash, set at the top of `client/src/pages/Home.jsx`. Replace them with City Sport's
+own campaign photos: add the files to `client/public/images/` and point the constants there.
+
+Brand logos come from the Simple Icons set (`client/src/components/BrandMark.jsx`). Brands
+that set does not include (Asics, Ellesse, Levi's, Tommy Hilfiger) appear as their name
+in type; add a `path` for them when you have the official artwork.
+
+Only YouTube is linked in the footer. To add Instagram or Facebook, put the addresses in
+`client/src/lib/company.js` and add the icons in `client/src/components/Footer.jsx`.
+
 ## Forms
 
-Both forms are validated on the server, carry a hidden honeypot field against bots, and
+There are three: the contact message, the availability request sent from "Ma sélection",
+and the newsletter sign-up in the footer (which requires the consent box to be ticked).
+On your own server sign-ups are kept in `server/data/subscribers.json`.
+
+All of them are validated on the server, carry a hidden honeypot field against bots, and
 are limited to six submissions per ten minutes per visitor. On Vercel that limit is kept
 per function instance, so treat it as a brake rather than a guarantee.
 

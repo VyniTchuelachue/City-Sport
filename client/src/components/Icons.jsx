@@ -24,13 +24,6 @@ export const SearchIcon = (props) => (
   </Icon>
 );
 
-export const BagIcon = (props) => (
-  <Icon {...props}>
-    <path d="M5 8h14l-1 12H6L5 8Z" />
-    <path d="M9 8V6.5a3 3 0 0 1 6 0V8" />
-  </Icon>
-);
-
 export const MenuIcon = (props) => (
   <Icon {...props}>
     <path d="M3.5 8h17M3.5 16h17" />
@@ -78,5 +71,26 @@ export const PlusIcon = (props) => (
 export const CheckIcon = (props) => (
   <Icon {...props}>
     <path d="m5 12.500 4.500 4.500L19 7.500" />
+  </Icon>
+);
+
+export const ArrowRightIcon = (props) => (
+  <Icon {...props}>
+    <path d="M4.5 12h15M13.5 6l6 6-6 6" />
+  </Icon>
+);
+
+export const CartIcon = (props) => (
+  <Icon {...props}>
+    <path d="M3 4.5h2.2l2.3 10.200h9.800l1.900-7.200H6.400" />
+    <circle cx="9" cy="19" r="1.400" />
+    <circle cx="16.200" cy="19" r="1.400" />
+  </Icon>
+);
+
+export const YoutubeIcon = (props) => (
+  <Icon {...props}>
+    <rect x="2.500" y="6" width="19" height="12" rx="3.500" />
+    <path d="m10.200 9.300 4.800 2.700-4.800 2.700Z" fill="currentColor" stroke="none" />
   </Icon>
 );

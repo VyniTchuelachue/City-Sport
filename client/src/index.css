@@ -3,15 +3,17 @@
 @theme {
   --font-sans: 'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif;
 
-  /* Black and white come from the wordmark; the green is the colour of the
-     oval sign that has hung over the shops since they opened. */
+  /* Black and white come from the wordmark; green is the colour of the oval sign
+     over the shops. "vert" is the working green (white text on it passes AA);
+     "enseigne" is its brighter form for dark backgrounds and small accents. */
   --color-ink: #000000;
   --color-paper: #ffffff;
   --color-sol: #f1f2f2;
   --color-trait: #dcdfe0;
   --color-ardoise: #585d62;
+  --color-vert: #0e8745;
+  --color-vert-fonce: #0a6b36;
   --color-enseigne: #1eb56c;
-  --color-enseigne-fonce: #0b7a47;
   --color-soldes: #d5152a;
 
   --ease-sortie: cubic-bezier(0.16, 1, 0.3, 1);
@@ -105,13 +107,12 @@
   padding-inline: clamp(1.125rem, 4vw, 3.5rem);
 }
 
-/* Headlines: Archivo at its widest, lower case like the wordmark. */
+/* Headlines: Archivo at its widest and heaviest. */
 @utility titre {
   font-stretch: 125%;
   font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.92;
-  text-transform: lowercase;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
 }
 
 /* Prices: the narrow cut, so figures read like a shelf tag. */
@@ -122,7 +123,6 @@
   letter-spacing: -0.005em;
 }
 
-/* Oval controls echo the shop sign. */
 @utility bouton {
   display: inline-flex;
   align-items: center;
@@ -130,7 +130,7 @@
   gap: 0.5rem;
   min-height: 3rem;
   padding: 0.5rem 1.5rem;
-  border-radius: 999px;
+  border-radius: 0.5rem;
   border: 1.5px solid var(--color-ink);
   font-size: 0.9375rem;
   font-weight: 650;
@@ -148,13 +148,15 @@
   }
 }
 
+/* The main action on a screen. */
 @utility bouton-plein {
-  background: var(--color-ink);
+  border-color: var(--color-vert);
+  background: var(--color-vert);
   color: var(--color-paper);
 
   &:hover:not(:disabled) {
-    background: var(--color-paper);
-    color: var(--color-ink);
+    border-color: var(--color-vert-fonce);
+    background: var(--color-vert-fonce);
   }
 }
 
@@ -166,6 +168,25 @@
     background: var(--color-ink);
     color: var(--color-paper);
   }
+}
+
+/* Outlined like bouton-contour but filled white, for use over photos and tinted panels. */
+@utility bouton-clair {
+  background: var(--color-paper);
+  color: var(--color-ink);
+
+  &:hover:not(:disabled) {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+}
+
+/* Smaller, fully rounded: secondary links such as "Get directions". */
+@utility bouton-pilule {
+  min-height: 2.5rem;
+  padding: 0.375rem 1.125rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
 }
 
 @utility champ {

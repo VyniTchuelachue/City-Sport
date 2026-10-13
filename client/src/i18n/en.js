@@ -12,12 +12,18 @@ export default {
     closeMenu: 'Close menu',
     search: 'Search',
     searchLabel: 'Search for an item',
-    searchPlaceholder: 'Brand, item, sport…',
+    searchPlaceholder: 'Search for shoes, clothing, brands…',
     selection: 'My list',
     selectionCount: (n) => (n ? `My list, ${n} item${n > 1 ? 's' : ''}` : 'My list, empty'),
     switchLang: 'Français',
     switchLangLabel: 'Lire ce site en français',
     home: 'City Sport, back to home',
+  },
+
+  strip: {
+    tagline: 'Two cities. Three stores. A bigger game.',
+    brands: 'Our brands',
+    visit: 'Visit our stores',
   },
 
   cat: {
@@ -49,23 +55,29 @@ export default {
 
   home: {
     pageTitle: 'Sport and lifestyle in Douala and Yaoundé',
-    heroLines: ['sport', 'dresses', 'the city.'],
+    heroLines: ['The city', 'moves.'],
+    heroAccent: 'You lead.',
     heroText:
-      'Shoes, clothing and equipment from the big brands, ready to try on in our three stores in Douala and Yaoundé.',
-    heroShop: 'Browse the shop',
+      "Sneakers, sportswear and essentials from the world's biggest brands. In Douala and Yaoundé.",
+    heroShop: 'Shop new in',
     heroStores: 'Find a store',
     heroAlt:
-      'Inside the City Sport store in Bali: a wall of Adidas and Puma sneakers, with rails of sweatshirts and t-shirts.',
-    aisles: 'the aisles',
-    aislesText: 'From the pitch to the street, for the whole family.',
-    arrivals: 'new in',
-    arrivalsLink: 'See every item',
-    brands: 'the brands',
-    brandsText: 'The big names in sport and lifestyle, under one sign.',
-    storesTitle: 'three stores, two cities',
-    storesText: 'Everything can be tried on in store: come and see, touch, compare.',
-    storesLink: 'Hours and directions',
-    aboutTitle: 'behind the sign',
+      'A man in a green cap and bright sneakers sitting on a low wall in front of palm trees.',
+    featured: 'Featured brands:',
+    categories: { lead: 'Shop by', accent: 'category' },
+    categoriesText: 'Everything you need to move, from the street to the pitch.',
+    categoriesLink: 'View all categories',
+    newIn: { lead: 'New', accent: 'in' },
+    newInText: 'The latest drops from your favourite brands.',
+    newInLink: 'View all new in',
+    stores: { lead: 'Our', accent: 'stores' },
+    storesText: 'Visit us in Douala and Yaoundé. Come and see, try on, compare.',
+    storesLink: 'View all stores',
+    brands: { lead: 'The', accent: 'brands' },
+    brandsText: 'The biggest names in sport and lifestyle, under one roof.',
+    brandsLink: 'View all brands',
+    about: { lead: 'Behind the', accent: 'sign' },
+    aboutAlt: 'A basketball player in a red jersey, in profile, at the side of the court.',
     aboutText:
       'City Sport is run by SODICAM, part of the Mercuriale International group. In Douala and Yaoundé the group also runs fashion, food and electronics stores.',
     aboutLink: 'About City Sport',
@@ -73,7 +85,7 @@ export default {
 
   shop: {
     pageTitle: 'Shop',
-    title: 'shop',
+    title: 'Shop',
     count: (n) => (n === 0 ? 'No items' : n === 1 ? '1 item' : `${n} items`),
     all: 'All',
     category: 'Aisle',
@@ -86,6 +98,7 @@ export default {
     sortAsc: 'Price, low to high',
     sortDesc: 'Price, high to low',
     sale: 'Reduced prices',
+    newOnly: 'New in',
     resultsFor: (q) => `Results for “${q}”`,
     clearSearch: 'Clear search',
     emptyTitle: 'No items match these filters.',
@@ -107,8 +120,10 @@ export default {
     notice: 'Price and availability to be confirmed in store.',
     where: 'Where to find it',
     call: 'Call',
-    related: 'in the same aisle',
-    notFoundTitle: 'item not found',
+    related: 'In the same aisle',
+    notFoundTitle: 'Item not found',
+    quickAdd: (name) => `Add ${name} to my list`,
+    pickSize: 'Choose a size',
     notFoundText: 'This item may have left the catalogue.',
     backToShop: 'Back to the shop',
     was: 'Previous price',
@@ -146,7 +161,7 @@ export default {
 
   stores: {
     pageTitle: 'Stores',
-    title: 'our stores',
+    title: 'Our stores',
     intro: 'Two addresses in Douala, one in Yaoundé.',
     directions: 'Directions',
     call: 'Call',
@@ -162,7 +177,7 @@ export default {
 
   about: {
     pageTitle: 'About',
-    title: 'about us',
+    title: 'About us',
     lead: 'City Sport dresses athletes and city people across Cameroon, with the big international brands close at hand.',
     p1: 'The stores are run by SODICAM, a multi-service company of the Mercuriale International group, based in Douala and Yaoundé. The group works in four trades: sport, fashion, food and electronics.',
     p2: 'In our stores you will find what you need to run, play, swim and train, and what you need to go out: sneakers, jeans, dresses and jackets for men, women and children.',
@@ -177,7 +192,7 @@ export default {
 
   contact: {
     pageTitle: 'Contact',
-    title: 'contact',
+    title: 'Contact',
     intro:
       'A question about an item, a size or a store? Write to us, or call your nearest store directly.',
     name: 'Name',
@@ -210,6 +225,7 @@ export default {
     rate_limited: 'Too many messages sent. Try again in a few minutes.',
     server_error: 'Sending did not go through. Try again in a moment.',
     validation: 'Fix the highlighted fields, then send again.',
+    consent: 'Tick the box to confirm you want to subscribe.',
     unavailable: 'This form is unavailable right now. Please call the store directly.',
   },
 
@@ -221,12 +237,20 @@ export default {
     headOffice: 'Head office: Akwa, Douala',
     payments: (list) => `Paying in store: ${list}`,
     youtube: 'City Sport on YouTube',
-    rights: (year) => `© ${year} SODICAM. All rights reserved.`,
+    aboutLink: 'About City Sport',
+    newsletterTitle: 'Join the movement',
+    newsletterText: 'Get the latest drops, offers and events.',
+    emailLabel: 'Your email address',
+    consent: 'I agree to receive marketing communications from City Sport.',
+    subscribe: 'Subscribe',
+    subscribed: 'Thank you, you are subscribed.',
+    group: 'Proudly part of the SODICAM / Mercuriale International group.',
+    rights: (year) => `© ${year} City Sport. All rights reserved.`,
   },
 
   notFound: {
     pageTitle: 'Page not found',
-    title: 'page not found',
+    title: 'Page not found',
     text: 'This address does not lead to any page on the site.',
     home: 'Back to home',
   },

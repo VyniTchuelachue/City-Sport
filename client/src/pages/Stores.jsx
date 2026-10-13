@@ -59,7 +59,7 @@ function StoreMap({ store }) {
       src={`https://www.google.com/maps?q=${lat},${lng}&z=16&output=embed`}
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-      className="aspect-[4/3] w-full border-0 bg-sol"
+      className="aspect-[4/3] w-full rounded-lg border-0 bg-sol"
     />
   );
 }
@@ -80,7 +80,7 @@ function Store({ store, today }) {
           alt={t('stores.photoAlt', store.name)}
           loading="lazy"
           decoding="async"
-          className="aspect-[4/3] w-full bg-sol object-cover"
+          className="aspect-[4/3] w-full rounded-lg bg-sol object-cover"
         />
         {others.length > 0 && (
           <div className="mt-4 grid grid-cols-2 gap-4">
@@ -91,7 +91,7 @@ function Store({ store, today }) {
                 alt=""
                 loading="lazy"
                 decoding="async"
-                className="aspect-[4/3] w-full bg-sol object-cover"
+                className="aspect-[4/3] w-full rounded-lg bg-sol object-cover"
               />
             ))}
           </div>
