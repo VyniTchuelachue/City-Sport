@@ -1,0 +1,12 @@
+[
+  { "name": "Nike", "blurb": { "fr": "Les nouvelles sorties, dès leur arrivée en magasin.", "en": "New releases as soon as they reach the shop floor." } },
+  { "name": "Adidas", "blurb": { "fr": "Chaussures, vêtements et accessoires, Originals compris.", "en": "Shoes, clothing and accessories, Originals included." } },
+  { "name": "Puma", "blurb": { "fr": "Toute la gamme, du terrain à la rue.", "en": "The full range, from pitch to street." } },
+  { "name": "Under Armour", "blurb": { "fr": "Vêtements, ensembles et chaussures de performance.", "en": "Performance clothing, sets and shoes." } },
+  { "name": "Asics", "blurb": { "fr": "Running et tennis pour celles et ceux qui comptent les kilomètres.", "en": "Running and tennis for people who count the kilometres." } },
+  { "name": "New Balance", "blurb": { "fr": "Baskets et sweats au quotidien.", "en": "Everyday sneakers and sweats." } },
+  { "name": "Jordan", "blurb": { "fr": "Basket et streetwear.", "en": "Basketball and streetwear." } },
+  { "name": "Ellesse", "blurb": { "fr": "Le sport côté mode.", "en": "Sport with a fashion accent." } },
+  { "name": "Levi's", "blurb": { "fr": "Jeans et essentiels.", "en": "Jeans and essentials." } },
+  { "name": "Tommy Hilfiger", "blurb": { "fr": "Le style preppy, en version décontractée.", "en": "Preppy style, kept casual." } }
+]

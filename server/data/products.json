@@ -1,0 +1,1013 @@
+[
+  {
+    "slug": "nike-running-rouge",
+    "brand": "Nike",
+    "name": {
+      "fr": "Chaussure de running rouge",
+      "en": "Red running shoe"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Running",
+      "en": "Running"
+    },
+    "gender": "homme",
+    "price": 62000,
+    "compareAt": null,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Tige en maille respirante et semelle souple pour les sorties sur route.",
+      "en": "Breathable knit upper and a flexible sole for road runs."
+    }
+  },
+  {
+    "slug": "nike-training-fluo",
+    "brand": "Nike",
+    "name": {
+      "fr": "Chaussure de training jaune fluo",
+      "en": "Volt yellow training shoe"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Training",
+      "en": "Training"
+    },
+    "gender": "mixte",
+    "price": 58000,
+    "compareAt": null,
+    "sizes": [
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Stable et légère pour la salle, le circuit training et le cardio.",
+      "en": "Stable and light for the gym, circuits and cardio."
+    }
+  },
+  {
+    "slug": "nike-basse-pastel",
+    "brand": "Nike",
+    "name": {
+      "fr": "Basket basse pastel",
+      "en": "Pastel low-top sneaker"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "femme",
+    "price": 75000,
+    "compareAt": null,
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Une silhouette de basket classique, en couleurs douces.",
+      "en": "A classic court silhouette in soft colours."
+    }
+  },
+  {
+    "slug": "nike-air-blanc-orange",
+    "brand": "Nike",
+    "name": {
+      "fr": "Basket à bulle d'air blanche et orange",
+      "en": "White and orange air-sole sneaker"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "homme",
+    "price": 85000,
+    "compareAt": 98000,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Amorti visible au talon et touches orange pour le quotidien.",
+      "en": "Visible heel cushioning with orange accents for everyday wear."
+    }
+  },
+  {
+    "slug": "nike-cuir-blanc",
+    "brand": "Nike",
+    "name": {
+      "fr": "Basket basse en cuir blanc",
+      "en": "White leather low-top"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "mixte",
+    "price": 70000,
+    "compareAt": null,
+    "sizes": [
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Le cuir blanc qui va avec tout, du jean au survêtement.",
+      "en": "White leather that goes with everything, from jeans to tracksuits."
+    }
+  },
+  {
+    "slug": "nike-cuir-noir",
+    "brand": "Nike",
+    "name": {
+      "fr": "Basket basse en cuir noir",
+      "en": "Black leather low-top"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "homme",
+    "price": 70000,
+    "compareAt": null,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "La même silhouette, en noir et blanc.",
+      "en": "The same silhouette, in black and white."
+    }
+  },
+  {
+    "slug": "new-balance-retro-olive",
+    "brand": "New Balance",
+    "name": {
+      "fr": "Basket rétro olive",
+      "en": "Olive retro runner"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "homme",
+    "price": 68000,
+    "compareAt": null,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image": "https://images.unsplash.com/photo-1539185441755-769473a23570",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Daim et maille dans un ton olive, sur semelle running rétro.",
+      "en": "Suede and mesh in olive on a retro running sole."
+    }
+  },
+  {
+    "slug": "new-balance-retro-rose",
+    "brand": "New Balance",
+    "name": {
+      "fr": "Basket rétro rose",
+      "en": "Pink retro runner"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "femme",
+    "price": 68000,
+    "compareAt": 79000,
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Un rose poudré sur une coupe running des années 80.",
+      "en": "Powder pink on an eighties running shape."
+    }
+  },
+  {
+    "slug": "nike-basketball-grise",
+    "brand": "Nike",
+    "name": {
+      "fr": "Chaussure de basketball grise",
+      "en": "Grey basketball shoe"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Basketball",
+      "en": "Basketball"
+    },
+    "gender": "homme",
+    "price": 72000,
+    "compareAt": null,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Maintien de la cheville et accroche pour le parquet comme le bitume.",
+      "en": "Ankle support and grip for indoor and outdoor courts."
+    }
+  },
+  {
+    "slug": "jordan-montante-rouge",
+    "brand": "Jordan",
+    "name": {
+      "fr": "Basket montante rouge",
+      "en": "Red high-top sneaker"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Basketball",
+      "en": "Basketball"
+    },
+    "gender": "homme",
+    "price": 120000,
+    "compareAt": null,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Montante rouge intégrale, née sur les parquets.",
+      "en": "An all-red high-top with basketball roots."
+    }
+  },
+  {
+    "slug": "nike-junior-rose",
+    "brand": "Nike",
+    "name": {
+      "fr": "Basket junior rose et blanche",
+      "en": "Kids' pink and white sneaker"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "enfant",
+    "price": 45000,
+    "compareAt": null,
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "33",
+      "34",
+      "35"
+    ],
+    "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Amorti à bulle d'air, version petites pointures.",
+      "en": "Air-sole cushioning in smaller sizes."
+    }
+  },
+  {
+    "slug": "nike-junior-bleue",
+    "brand": "Nike",
+    "name": {
+      "fr": "Basket junior bleu électrique",
+      "en": "Kids' electric blue sneaker"
+    },
+    "category": "chaussures",
+    "type": {
+      "fr": "Lifestyle",
+      "en": "Lifestyle"
+    },
+    "gender": "enfant",
+    "price": 42000,
+    "compareAt": 52000,
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "33",
+      "34",
+      "35"
+    ],
+    "image": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Pour la cour de récré comme pour le sport.",
+      "en": "For the playground and for sport."
+    }
+  },
+  {
+    "slug": "sweat-capuche-gris",
+    "brand": "Puma",
+    "name": {
+      "fr": "Sweat à capuche gris",
+      "en": "Grey hoodie"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Sweat",
+      "en": "Hoodie"
+    },
+    "gender": "homme",
+    "price": 28000,
+    "compareAt": null,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Molleton épais, capuche doublée et poche kangourou.",
+      "en": "Heavy fleece, lined hood and kangaroo pocket."
+    }
+  },
+  {
+    "slug": "tshirt-coton-blanc",
+    "brand": "Adidas",
+    "name": {
+      "fr": "T-shirt blanc en coton",
+      "en": "White cotton t-shirt"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "T-shirt",
+      "en": "T-shirt"
+    },
+    "gender": "homme",
+    "price": 12000,
+    "compareAt": null,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Le basique en coton, coupe droite.",
+      "en": "The cotton basic, straight cut."
+    }
+  },
+  {
+    "slug": "tshirt-noir-essentiel",
+    "brand": "Puma",
+    "name": {
+      "fr": "T-shirt noir essentiel",
+      "en": "Essential black t-shirt"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "T-shirt",
+      "en": "T-shirt"
+    },
+    "gender": "mixte",
+    "price": 12000,
+    "compareAt": null,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Jersey de coton noir et petit logo poitrine.",
+      "en": "Black cotton jersey with a small chest logo."
+    }
+  },
+  {
+    "slug": "bomber-brique",
+    "brand": "Tommy Hilfiger",
+    "name": {
+      "fr": "Bomber couleur brique",
+      "en": "Brick bomber jacket"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Veste",
+      "en": "Jacket"
+    },
+    "gender": "homme",
+    "price": 45000,
+    "compareAt": 55000,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Veste zippée légère, bords-côtes aux poignets et à la taille.",
+      "en": "A light zip jacket with ribbed cuffs and hem."
+    }
+  },
+  {
+    "slug": "sweat-col-rond-blanc",
+    "brand": "New Balance",
+    "name": {
+      "fr": "Sweat col rond blanc",
+      "en": "White crewneck sweatshirt"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Sweat",
+      "en": "Sweatshirt"
+    },
+    "gender": "mixte",
+    "price": 25000,
+    "compareAt": null,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Un col rond tout simple, en molleton doux.",
+      "en": "A plain crewneck in soft fleece."
+    }
+  },
+  {
+    "slug": "ensemble-survetement-jaune",
+    "brand": "Adidas",
+    "name": {
+      "fr": "Ensemble survêtement jaune",
+      "en": "Yellow tracksuit set"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Ensemble",
+      "en": "Set"
+    },
+    "gender": "femme",
+    "price": 48000,
+    "compareAt": null,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Haut et pantalon assortis, pour le sport ou pour sortir.",
+      "en": "Matching top and trousers, for training or going out."
+    }
+  },
+  {
+    "slug": "legging-sport-orange",
+    "brand": "Under Armour",
+    "name": {
+      "fr": "Legging de sport orange",
+      "en": "Orange training leggings"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Legging",
+      "en": "Leggings"
+    },
+    "gender": "femme",
+    "price": 22000,
+    "compareAt": null,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Taille haute et tissu extensible qui suit le mouvement.",
+      "en": "High waist and stretch fabric that moves with you."
+    }
+  },
+  {
+    "slug": "robe-rouge-fleurie",
+    "brand": "Ellesse",
+    "name": {
+      "fr": "Robe rouge à fleurs",
+      "en": "Red floral dress"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Robe",
+      "en": "Dress"
+    },
+    "gender": "femme",
+    "price": 32000,
+    "compareAt": null,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Robe cintrée à volants, imprimé fleuri.",
+      "en": "A fitted, ruffled dress in a floral print."
+    }
+  },
+  {
+    "slug": "robe-longue-rouge",
+    "brand": "Tommy Hilfiger",
+    "name": {
+      "fr": "Robe longue rouge",
+      "en": "Long red dress"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Robe",
+      "en": "Dress"
+    },
+    "gender": "femme",
+    "price": 38000,
+    "compareAt": null,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Une robe longue et fluide pour les grandes occasions.",
+      "en": "A long, flowing dress for special occasions."
+    }
+  },
+  {
+    "slug": "robe-legere-bleu-ciel",
+    "brand": "Ellesse",
+    "name": {
+      "fr": "Robe légère bleu ciel",
+      "en": "Light sky-blue dress"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Robe",
+      "en": "Dress"
+    },
+    "gender": "femme",
+    "price": 29000,
+    "compareAt": 36000,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Tissu léger et coupe portefeuille pour les journées chaudes.",
+      "en": "Light fabric and a wrap cut for hot days."
+    }
+  },
+  {
+    "slug": "jean-brut-droit",
+    "brand": "Levi's",
+    "name": {
+      "fr": "Jean brut coupe droite",
+      "en": "Dark straight-leg jeans"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "Jean",
+      "en": "Jeans"
+    },
+    "gender": "homme",
+    "price": 42000,
+    "compareAt": null,
+    "sizes": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "36"
+    ],
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Denim brut, cinq poches, coupe droite.",
+      "en": "Raw denim, five pockets, straight leg."
+    }
+  },
+  {
+    "slug": "tshirt-enfant-blanc",
+    "brand": "Adidas",
+    "name": {
+      "fr": "T-shirt enfant blanc",
+      "en": "Kids' white t-shirt"
+    },
+    "category": "vetements",
+    "type": {
+      "fr": "T-shirt",
+      "en": "T-shirt"
+    },
+    "gender": "enfant",
+    "price": 8000,
+    "compareAt": null,
+    "sizes": [
+      "4 ans",
+      "6 ans",
+      "8 ans",
+      "10 ans",
+      "12 ans"
+    ],
+    "image": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Coton doux, facile à laver et à relaver.",
+      "en": "Soft cotton that survives wash after wash."
+    }
+  },
+  {
+    "slug": "casquette-blanche",
+    "brand": "Puma",
+    "name": {
+      "fr": "Casquette blanche",
+      "en": "White cap"
+    },
+    "category": "accessoires",
+    "type": {
+      "fr": "Casquette",
+      "en": "Cap"
+    },
+    "gender": "mixte",
+    "price": 9000,
+    "compareAt": null,
+    "sizes": [
+      "TU"
+    ],
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Six panneaux, visière courbée et réglage au dos.",
+      "en": "Six panels, curved peak and adjustable back."
+    }
+  },
+  {
+    "slug": "sac-a-dos-marine",
+    "brand": "Under Armour",
+    "name": {
+      "fr": "Sac à dos bleu marine",
+      "en": "Navy backpack"
+    },
+    "category": "accessoires",
+    "type": {
+      "fr": "Sac",
+      "en": "Bag"
+    },
+    "gender": "mixte",
+    "price": 24000,
+    "compareAt": null,
+    "sizes": [
+      "TU"
+    ],
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Un grand compartiment et une poche avant pour l'école, la salle ou le week-end.",
+      "en": "One large compartment and a front pocket for school, the gym or a weekend away."
+    }
+  },
+  {
+    "slug": "gourde-isotherme-verte",
+    "brand": "Puma",
+    "name": {
+      "fr": "Gourde isotherme verte",
+      "en": "Green insulated bottle"
+    },
+    "category": "accessoires",
+    "type": {
+      "fr": "Gourde",
+      "en": "Bottle"
+    },
+    "gender": "mixte",
+    "price": 9500,
+    "compareAt": null,
+    "sizes": [
+      "TU"
+    ],
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Garde l'eau fraîche pendant l'entraînement.",
+      "en": "Keeps water cold through a training session."
+    }
+  },
+  {
+    "slug": "ballon-football-etoiles",
+    "brand": "Adidas",
+    "name": {
+      "fr": "Ballon de football à étoiles",
+      "en": "Star-print football"
+    },
+    "category": "equipement",
+    "type": {
+      "fr": "Football",
+      "en": "Football"
+    },
+    "gender": "mixte",
+    "price": 18000,
+    "compareAt": null,
+    "sizes": [
+      "Taille 5"
+    ],
+    "image": "https://images.unsplash.com/photo-1614632537190-23e4146777db",
+    "isNew": true,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Taille 5, pour l'entraînement et les matchs entre amis.",
+      "en": "Size 5, for training and five-a-side with friends."
+    }
+  },
+  {
+    "slug": "ballon-basketball",
+    "brand": "Nike",
+    "name": {
+      "fr": "Ballon de basketball",
+      "en": "Basketball"
+    },
+    "category": "equipement",
+    "type": {
+      "fr": "Basketball",
+      "en": "Basketball"
+    },
+    "gender": "mixte",
+    "price": 16000,
+    "compareAt": null,
+    "sizes": [
+      "Taille 7"
+    ],
+    "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Revêtement adhérent pour le jeu en extérieur.",
+      "en": "A grippy cover made for outdoor play."
+    }
+  },
+  {
+    "slug": "kit-natation",
+    "brand": "Nike",
+    "name": {
+      "fr": "Lunettes et bonnet de natation",
+      "en": "Swim goggles and cap"
+    },
+    "category": "equipement",
+    "type": {
+      "fr": "Natation",
+      "en": "Swimming"
+    },
+    "gender": "mixte",
+    "price": 15000,
+    "compareAt": 19000,
+    "sizes": [
+      "TU"
+    ],
+    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635",
+    "isNew": false,
+    "stores": [
+      "akwa",
+      "kadji",
+      "yaounde"
+    ],
+    "description": {
+      "fr": "Le duo pour la piscine : lunettes anti-buée et bonnet en silicone.",
+      "en": "The pool pair: anti-fog goggles and a silicone cap."
+    }
+  }
+]

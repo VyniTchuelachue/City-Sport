@@ -1,0 +1,199 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Archivo Variable', 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+  /* Black and white come from the wordmark; the green is the colour of the
+     oval sign that has hung over the shops since they opened. */
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+  --color-sol: #f1f2f2;
+  --color-trait: #dcdfe0;
+  --color-ardoise: #585d62;
+  --color-enseigne: #1eb56c;
+  --color-enseigne-fonce: #0b7a47;
+  --color-soldes: #d5152a;
+
+  --ease-sortie: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-monte: monte 0.9s var(--ease-sortie) both;
+  --animate-glisse: glisse 1.1s var(--ease-sortie) both;
+  --animate-tiroir: tiroir 0.35s var(--ease-sortie) both;
+  --animate-voile: voile 0.25s ease-out both;
+
+  @keyframes monte {
+    from {
+      transform: translateY(105%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes glisse {
+    from {
+      opacity: 0;
+      transform: translateX(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes tiroir {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes voile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  .sur-noir :focus-visible {
+    outline-color: var(--color-paper);
+  }
+
+  ::selection {
+    background: var(--color-enseigne);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Page gutter and measure shared by every section. */
+@utility wrap {
+  width: 100%;
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.125rem, 4vw, 3.5rem);
+}
+
+/* Headlines: Archivo at its widest, lower case like the wordmark. */
+@utility titre {
+  font-stretch: 125%;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  text-transform: lowercase;
+}
+
+/* Prices: the narrow cut, so figures read like a shelf tag. */
+@utility prix {
+  font-stretch: 85%;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.005em;
+}
+
+/* Oval controls echo the shop sign. */
+@utility bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-ink);
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@utility bouton-plein {
+  background: var(--color-ink);
+  color: var(--color-paper);
+
+  &:hover:not(:disabled) {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+}
+
+@utility bouton-contour {
+  background: transparent;
+  color: var(--color-ink);
+
+  &:hover:not(:disabled) {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+}
+
+@utility champ {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.625rem 0.875rem;
+  border: 1.5px solid var(--color-trait);
+  border-radius: 0.5rem;
+  background: var(--color-paper);
+  font-size: 1rem;
+  line-height: 1.4;
+
+  &:hover {
+    border-color: var(--color-ardoise);
+  }
+  &:focus {
+    border-color: var(--color-ink);
+    outline: none;
+    box-shadow: 0 0 0 1.5px var(--color-ink);
+  }
+  &[aria-invalid='true'] {
+    border-color: var(--color-soldes);
+  }
+}
+
+@utility sans-barre {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

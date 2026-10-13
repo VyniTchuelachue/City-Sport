@@ -1,0 +1,20 @@
+{
+  "name": "city-sport",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site web City Sport Cameroun (React, Tailwind CSS, Node.js)",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c green,white \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "seed": "node scripts/seed-products.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

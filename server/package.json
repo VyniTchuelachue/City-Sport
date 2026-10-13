@@ -1,0 +1,14 @@
+{
+  "name": "city-sport-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js --port=4000",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "helmet": "^8.3.0"
+  }
+}

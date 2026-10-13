@@ -1,0 +1,7 @@
+node_modules
+client/dist
+server/data/messages.json
+server/data/requests.json
+.env
+*.log
+.vercel

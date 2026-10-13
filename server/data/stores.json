@@ -1,0 +1,158 @@
+[
+  {
+    "id": "akwa",
+    "name": "City Sport Akwa",
+    "shortName": "Akwa",
+    "city": "Douala",
+    "district": "Akwa",
+    "address": "749 Boulevard du Président Ahmadou Ahidjo, Akwa, Douala",
+    "phone": "+237670249292",
+    "phoneDisplay": "6 70 24 92 92",
+    "coords": {
+      "lat": 4.0466061,
+      "lng": 9.6971205
+    },
+    "mapsUrl": "https://maps.app.goo.gl/LVDcNZMo9dA5ggQ19",
+    "hours": [
+      null,
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "11:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ]
+    ],
+    "images": [
+      "/images/stores/akwa-facade.webp",
+      "/images/stores/akwa-interior.webp",
+      "/images/stores/akwa-storefront.webp"
+    ],
+    "note": {
+      "fr": "Sur le boulevard Ahidjo, au cœur d'Akwa, à côté d'Aldo.",
+      "en": "On Boulevard Ahidjo in the heart of Akwa, next to Aldo."
+    }
+  },
+  {
+    "id": "kadji",
+    "name": "City Sport Kadji",
+    "shortName": "Kadji",
+    "city": "Douala",
+    "district": "Bali",
+    "address": "Super U Bali, 5362 Rue Njo-Njo, Bali, Douala",
+    "phone": "+237675325667",
+    "phoneDisplay": "6 75 32 56 67",
+    "coords": {
+      "lat": 4.034951,
+      "lng": 9.6944935
+    },
+    "mapsUrl": "https://maps.app.goo.gl/3o5e2pPoZFQoZfMf9",
+    "hours": [
+      [
+        "09:30",
+        "20:00"
+      ],
+      [
+        "09:30",
+        "20:00"
+      ],
+      [
+        "09:30",
+        "20:00"
+      ],
+      [
+        "09:30",
+        "20:00"
+      ],
+      [
+        "09:30",
+        "20:00"
+      ],
+      [
+        "09:30",
+        "20:00"
+      ],
+      [
+        "09:30",
+        "20:00"
+      ]
+    ],
+    "images": [
+      "/images/stores/bali-storefront.webp",
+      "/images/stores/bali-interior.webp"
+    ],
+    "note": {
+      "fr": "Dans la galerie du Super U Bali, à côté de Celio et Kiabi. Ouvert tous les jours.",
+      "en": "In the Super U Bali arcade, next to Celio and Kiabi. Open every day."
+    }
+  },
+  {
+    "id": "yaounde",
+    "name": "City Sport Yaoundé",
+    "shortName": "Yaoundé",
+    "city": "Yaoundé",
+    "district": "Centre-ville",
+    "address": "Avenue Ahidjo, Yaoundé",
+    "phone": "+237699103141",
+    "phoneDisplay": "6 99 10 31 41",
+    "coords": {
+      "lat": 3.8626125,
+      "lng": 11.5203522
+    },
+    "mapsUrl": "https://maps.app.goo.gl/S3Wn6qouEADSmJwB6",
+    "hours": [
+      [
+        "10:00",
+        "17:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ],
+      [
+        "09:00",
+        "19:00"
+      ]
+    ],
+    "images": [
+      "/images/stores/yaounde-entrance.webp"
+    ],
+    "note": {
+      "fr": "Au centre-ville, dans l'immeuble du supermarché Casino, avenue Ahidjo.",
+      "en": "Downtown, inside the Casino supermarket building on Avenue Ahidjo."
+    }
+  }
+]
