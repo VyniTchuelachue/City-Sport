@@ -7,16 +7,17 @@ import storeRoutes from './routes/stores.js';
 import formRoutes from './routes/forms.js';
 
 // Builds the Express app. Two things use it:
-//  - server/index.js, which also serves the built React app from `staticDir`
-//  - api/index.js, the Vercel function, where the CDN serves the React app
-//    and only /api requests reach Express
+//  - server/index.js, the Node server, which also serves the built React app
+//    from `staticDir`
+//  - Vercel, which runs the default export at the bottom of this file as the
+//    "server" service and sends it only /api requests (see vercel.json)
 export function createApp({ staticDir } = {}) {
   const app = express();
   app.disable('x-powered-by');
   // Behind a reverse proxy (Vercel, Nginx, Render…) this makes req.ip the visitor's address.
   app.set('trust proxy', 1);
 
-  // vercel.json repeats this policy for the pages the CDN serves; keep the two in step.
+  // client/vite.config.js writes the same policy into the built pages; keep the two in step.
   app.use(
     helmet({
       contentSecurityPolicy: {
@@ -27,6 +28,9 @@ export function createApp({ staticDir } = {}) {
           fontSrc: ["'self'", 'data:'],
           frameSrc: ['https://www.google.com', 'https://maps.google.com'],
           connectSrc: ["'self'"],
+          // Left out so the site also works over plain http on a local network
+          // (testing from a phone, for instance). Vercel serves https regardless.
+          upgradeInsecureRequests: null,
         },
       },
       crossOriginEmbedderPolicy: false,
@@ -60,3 +64,7 @@ export function createApp({ staticDir } = {}) {
 
   return app;
 }
+
+// Vercel's entry point: an app with the API only. Vercel passes the path through
+// unchanged, so /api/products arrives here as /api/products.
+export default createApp();

@@ -1,5 +1,5 @@
 // Entry point for running on your own machine or server (npm run dev / npm start).
-// On Vercel, api/index.js is used instead.
+// On Vercel, the default export of app.js runs instead (see vercel.json).
 import path from 'node:path';
 import { existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';

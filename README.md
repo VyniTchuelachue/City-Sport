@@ -18,12 +18,26 @@ Open http://localhost:5173. The API runs on port 4000 and Vite proxies `/api` to
 
 1. Open https://vercel.com/new, sign in with the GitHub account that owns this
    repository, and choose **Import** next to `City-Sport`.
-2. Leave every build setting as it is. `vercel.json` already tells Vercel how to install,
-   build (`npm run build`), where the site is (`client/dist`) and that `/api/*` goes to
-   the function in `api/index.js`.
+2. Leave every build setting as it is. `vercel.json` describes the project as two
+   [services](https://vercel.com/docs/services) on one domain:
+
+   | Service | Folder | Public address |
+   | --- | --- | --- |
+   | `client` | `client/` (Vite build of the React site) | everything except `/api` |
+   | `server` | `server/` (the Express app exported by `server/app.js`) | `/api/*` |
+
 3. Add the environment variables for the forms (next section), then **Deploy**.
 
 Every push to `main` redeploys the site. Pull requests get their own preview address.
+
+The browser calls the API on the same domain, so the two services never call each other
+directly and no service bindings are needed.
+
+To try the Vercel setup on your machine, without a Vercel account:
+
+```bash
+npx vercel dev -L
+```
 
 ### Make the forms deliver on Vercel
 
@@ -86,7 +100,8 @@ Everything editable is JSON in `server/data`:
   (the crossed-out price), `sizes`, `image`, `isNew` and the `stores` that carry it.
 
 On Vercel, commit the change and push: the site redeploys with the new content. On your
-own server the files are re-read as soon as they change, with no restart.
+own server the files are re-read as soon as they change, with no restart; if a file is
+saved with a JSON mistake, the site keeps the last valid version and logs a warning.
 
 Interface wording lives in `client/src/i18n/fr.js` and `en.js`. Head-office details,
 payment methods and the sister-store list are in `client/src/lib/company.js`.
@@ -111,8 +126,7 @@ Delivery is handled in `server/lib/deliver.js`; the e-mail text is built in
 ## Project layout
 
 ```
-api/index.js            Vercel function: hands /api requests to the Express app
-vercel.json             Vercel build, routing, security and cache headers
+vercel.json             Vercel services, routing and headers
 client/                 React app (Vite, Tailwind CSS v4)
   public/images/stores/ store photos
   src/components/       header, footer, product card, selection drawer…
@@ -121,7 +135,7 @@ client/                 React app (Vite, Tailwind CSS v4)
   src/lib/              API client, price/time formatting, opening-hours logic
   src/pages/            one file per page
 server/                 Express API
-  app.js                builds the app (shared by Vercel and the Node server)
+  app.js                builds the app; its default export is what Vercel runs
   index.js              Node server entry (npm run dev, npm start)
   data/                 JSON content, and stored submissions on your own server
   lib/                  data access, form delivery, rate limit
