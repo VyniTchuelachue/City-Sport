@@ -16,9 +16,8 @@ Open http://localhost:5173. The API runs on port 4000 and Vite proxies `/api` to
 
 ## Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/VyniTchuelachue/City-Sport)
-
-1. In Vercel, choose **Add New > Project** and import this repository.
+1. Open https://vercel.com/new, sign in with the GitHub account that owns this
+   repository, and choose **Import** next to `City-Sport`.
 2. Leave every build setting as it is. `vercel.json` already tells Vercel how to install,
    build (`npm run build`), where the site is (`client/dist`) and that `/api/*` goes to
    the function in `api/index.js`.
